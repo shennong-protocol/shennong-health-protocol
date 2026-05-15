@@ -1,0 +1,68 @@
+<view class="container">
+  <!-- 用户信息卡 -->
+  <view class="card profile-header">
+    <view class="avatar-large">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="profile-info">
+      <view class="profile-name">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="tag">神农村民</view>
+      <view class="profile-constitution" wx:if="{{constitutionType}}">体质：{{constitutionType}}</view>
+    </view>
+  </view>
+
+  <!-- 十六字家训 -->
+  <view class="card family-creed">
+    <view class="creed-title">🌿 十六字家训</view>
+    <view class="creed-text">认真吃饭，好好睡觉</view>
+    <view class="creed-text">对人善良，对己克制</view>
+  </view>
+
+  <!-- 信用分 -->
+  <view class="card credit-card">
+    <view class="credit-row">
+      <view class="credit-label">信用分</view>
+      <view class="credit-score">{{creditScore}}</view>
+    </view>
+    <view class="credit-bar">
+      <view class="credit-fill" style="width: {{creditScore}}%"></view>
+    </view>
+    <view class="credit-level">{{creditLevel}}</view>
+  </view>
+
+  <!-- 功能列表 -->
+  <view class="card func-list">
+    <view class="func-item" bindtap="goGuarantee">
+      <text>🛡️ 我的保障</text>
+      <text class="func-arrow">›</text>
+    </view>
+    <view class="func-item" bindtap="goContribution">
+      <text>🤝 贡献记录</text>
+      <text class="func-arrow">›</text>
+    </view>
+    <view class="func-item" bindtap="goConsumption">
+      <text>💰 消费记录</text>
+      <text class="func-arrow">›</text>
+    </view>
+    <view class="func-item" bindtap="goTongueHistory">
+      <text>👅 舌象记录</text>
+      <text class="func-arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 设置 -->
+  <view class="card func-list">
+    <view class="func-item" bindtap="showAbout">
+      <text>ℹ️ 关于地球村健康</text>
+      <text class="func-arrow">›</text>
+    </view>
+    <view class="func-item" bindtap="showPrivacy">
+      <text>🔒 隐私政策</text>
+      <text class="func-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="disclaimer">我们帮你看见，决定权永远在你。认真吃饭，好好睡觉，对人善良，对己克制。</view>
+</view>

@@ -1,0 +1,87 @@
+/* 保障页样式 */
+.guarantee-hero {
+  text-align: center;
+  padding: 48rpx 32rpx;
+  background: linear-gradient(135deg, #FFF8E1, #FFE0B2);
+}
+
+.hero-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #5D4037;
+  margin-bottom: 8rpx;
+}
+
+.hero-subtitle {
+  font-size: 26rpx;
+  color: #8D6E63;
+  margin-bottom: 32rpx;
+}
+
+.progress-section {
+  margin-bottom: 32rpx;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.progress-pct {
+  font-weight: 700;
+  color: #D4AF37;
+  font-size: 32rpx;
+}
+
+.milestones {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24rpx;
+}
+
+.milestone {
+  text-align: center;
+  opacity: 0.4;
+}
+
+.milestone.reached {
+  opacity: 1;
+}
+
+.milestone-year {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.milestone-pct {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #D4AF37;
+}
+
+.milestone.reached .milestone-pct {
+  color: #2E7D32;
+}
+
+/* 信息列表 */
+.info-list {
+  padding: 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12rpx 0;
+  font-size: 28rpx;
+  color: #555;
+  line-height: 1.6;
+}
+
+.info-dot {
+  color: #2E7D32;
+  margin-right: 12rpx;
+  flex-shrink: 0;
+}

@@ -1,0 +1,166 @@
+/* 首页样式 */
+.user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 24rpx;
+  border: 4rpx solid #E8F5E9;
+}
+
+.user-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.daily-tip {
+  font-size: 26rpx;
+  color: #999;
+  max-width: 360rpx;
+  text-align: right;
+}
+
+/* 签到卡片 */
+.checkin-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+}
+
+.checkin-left {
+  display: flex;
+  align-items: center;
+}
+
+.checkin-icon {
+  font-size: 56rpx;
+  margin-right: 20rpx;
+}
+
+.checkin-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+.checkin-sub {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.checkin-points {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #2E7D32;
+}
+
+/* 核心服务 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  margin: 24rpx 0 16rpx;
+  padding-left: 8rpx;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 32rpx;
+}
+
+.service-icon {
+  font-size: 56rpx;
+  margin-right: 24rpx;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.service-desc {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+
+.service-arrow {
+  font-size: 40rpx;
+  color: #CCC;
+}
+
+.service-right {
+  display: flex;
+  align-items: baseline;
+}
+
+.points-balance {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #2E7D32;
+}
+
+.points-unit {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 4rpx;
+}
+
+.guarantee-pct {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #D4AF37;
+}
+
+/* 智慧卡片 */
+.wisdom-card {
+  background: linear-gradient(135deg, #FFF8E1, #FFF3E0);
+  text-align: center;
+  padding: 40rpx 32rpx;
+}
+
+.wisdom-icon {
+  font-size: 48rpx;
+  margin-bottom: 16rpx;
+}
+
+.wisdom-text {
+  font-size: 30rpx;
+  color: #5D4037;
+  line-height: 1.8;
+  margin-bottom: 12rpx;
+}
+
+.wisdom-source {
+  font-size: 24rpx;
+  color: #999;
+}

@@ -1,0 +1,132 @@
+/* 积分页样式 */
+.balance-card {
+  text-align: center;
+  padding: 48rpx 32rpx;
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+}
+
+.balance-label {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.balance-number {
+  font-size: 80rpx;
+  font-weight: 700;
+  color: #2E7D32;
+  margin-bottom: 8rpx;
+}
+
+.balance-hint {
+  font-size: 26rpx;
+  color: #1B5E20;
+  margin-bottom: 24rpx;
+}
+
+.balance-row {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1rpx solid rgba(46,125,50,0.2);
+  padding-top: 24rpx;
+}
+
+.balance-item-value {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+.balance-item-label {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 4rpx;
+}
+
+/* 签到 */
+.checkin-bar {
+  text-align: center;
+  padding: 16rpx;
+}
+
+.checkin-btn {
+  display: inline-block;
+  background: #2E7D32;
+  color: #fff;
+  padding: 20rpx 64rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.checkin-btn.checked {
+  background: #E0E0E0;
+  color: #999;
+}
+
+/* 兑换 */
+.goods-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.goods-card {
+  flex: 1;
+  min-width: 45%;
+  padding: 24rpx;
+}
+
+.goods-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.goods-desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 12rpx;
+}
+
+.goods-cost {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #D4AF37;
+}
+
+/* 明细 */
+.tx-card {
+  padding: 20rpx 32rpx;
+}
+
+.tx-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tx-desc {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.tx-amount {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.tx-amount.earn {
+  color: #2E7D32;
+}
+
+.tx-amount.spend {
+  color: #E53935;
+}
+
+.tx-time {
+  font-size: 22rpx;
+  color: #BBB;
+  margin-top: 4rpx;
+}

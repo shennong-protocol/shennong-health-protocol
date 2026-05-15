@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- 舌象入口 -->
+  <view class="card tongue-hero">
+    <view class="hero-icon">👅</view>
+    <view class="hero-title">舌象记录</view>
+    <view class="hero-desc">帮你看见身体的状态，决定权永远在你</view>
+    <button class="btn-primary" bindtap="takePhoto">拍照记录</button>
+    <view class="hero-or">或</view>
+    <button class="btn-secondary" bindtap="chooseImage">从相册选择</button>
+  </view>
+
+  <!-- 九种体质 -->
+  <view class="section-title">九种体质特征</view>
+  <view class="constitution-grid">
+    <view class="constitution-item" wx:for="{{constitutionTypes}}" wx:key="code">
+      <view class="constitution-name">{{item.name}}</view>
+    </view>
+  </view>
+
+  <!-- 历史记录 -->
+  <view class="section-title">舌象记录</view>
+  <view wx:if="{{records.length === 0}}" class="empty-state">
+    <text>暂无舌象记录</text>
+    <text class="empty-hint">拍照记录，帮你看见</text>
+  </view>
+  <view wx:else>
+    <view class="card record-card" wx:for="{{records}}" wx:key="id">
+      <view class="record-header">
+        <view class="record-type tag">{{item.constitution_type}}</view>
+        <view class="record-time">{{item.diagnosis_time}}</view>
+      </view>
+      <view class="record-confidence">参考度：{{item.constitution_confidence}}%</view>
+      <view class="record-summary">{{item.diagnosis_summary}}</view>
+    </view>
+  </view>
+
+  <view class="disclaimer">⚠️ 我们帮你看见，决定权永远在你。如有不适，请就医。</view>
+</view>

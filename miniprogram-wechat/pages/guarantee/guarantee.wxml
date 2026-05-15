@@ -1,0 +1,75 @@
+<view class="container">
+  <!-- 保障进度 -->
+  <view class="card guarantee-hero">
+    <view class="hero-title">🛡️ 神农保障</view>
+    <view class="hero-subtitle">走过15年，我们托你的底</view>
+    
+    <view class="progress-section">
+      <view class="progress-label">
+        <text>累计进度</text>
+        <text class="progress-pct">{{guaranteeRatio}}%</text>
+      </view>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{guaranteeRatio}}%"></view>
+      </view>
+    </view>
+
+    <view class="milestones">
+      <view class="milestone {{guaranteeRatio >= 10 ? 'reached' : ''}}">
+        <view class="milestone-year">5年</view>
+        <view class="milestone-pct">10%</view>
+      </view>
+      <view class="milestone {{guaranteeRatio >= 60 ? 'reached' : ''}}">
+        <view class="milestone-year">10年</view>
+        <view class="milestone-pct">60%</view>
+      </view>
+      <view class="milestone {{guaranteeRatio >= 100 ? 'reached' : ''}}">
+        <view class="milestone-year">15年</view>
+        <view class="milestone-pct">100%</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 保障说明 -->
+  <view class="card">
+    <view class="card-title">保障制度</view>
+    <view class="info-list">
+      <view class="info-item">
+        <text class="info-dot">●</text>
+        <text>你种下的树，结的果都是你的</text>
+      </view>
+      <view class="info-item">
+        <text class="info-dot">●</text>
+        <text>消费即积累保障额度，15年持续保障您的健康权益</text>
+      </view>
+      <view class="info-item">
+        <text class="info-dot">●</text>
+        <text>满15年后全球覆盖终身保障</text>
+      </view>
+      <view class="info-item">
+        <text class="info-dot">●</text>
+        <text>代码集体决策，智能合约自动执行去人治</text>
+      </view>
+      <view class="info-item">
+        <text class="info-dot">●</text>
+        <text>保障为实物和服务，永不缩水</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 贡献记录 -->
+  <view class="section-title">贡献记录</view>
+  <view wx:if="{{contributions.length === 0}}" class="empty-state">
+    <text>暂无贡献记录</text>
+  </view>
+  <view wx:else>
+    <view class="card" wx:for="{{contributions}}" wx:key="id">
+      <view class="list-item">
+        <view>{{item.contribution_type}}</view>
+        <view class="tag">+{{item.points_awarded}}积分</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="disclaimer">你积累的保障，永远是你的。走过15年，我们托你的底。</view>
+</view>

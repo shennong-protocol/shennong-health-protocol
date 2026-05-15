@@ -1,0 +1,58 @@
+<view class="container">
+  <!-- 积分余额 -->
+  <view class="card balance-card">
+    <view class="balance-label">我的积分</view>
+    <view class="balance-number">{{pointsBalance}}</view>
+    <view class="balance-hint">你的积累，永不过期</view>
+    <view class="balance-row">
+      <view class="balance-item">
+        <view class="balance-item-value">{{consumptionPts}}</view>
+        <view class="balance-item-label">消费积分</view>
+      </view>
+      <view class="balance-item">
+        <view class="balance-item-value">{{contributionPts}}</view>
+        <view class="balance-item-label">贡献积分</view>
+      </view>
+      <view class="balance-item">
+        <view class="balance-item-value">{{activityPts}}</view>
+        <view class="balance-item-label">活跃积分</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 签到 -->
+  <view class="card checkin-bar" bindtap="handleCheckin">
+    <view class="checkin-btn {{checkedIn ? 'checked' : ''}}">
+      {{checkedIn ? '✓ 今天也记得对自己好一点' : '☀️ 今天也记得对自己好一点'}}
+    </view>
+  </view>
+
+  <!-- 兑换商城 -->
+  <view class="section-title">兑换商城</view>
+  <view class="goods-grid">
+    <view class="card goods-card" wx:for="{{redeemItems}}" wx:key="id" bindtap="redeemItem" data-item="{{item}}">
+      <view class="goods-name">{{item.name}}</view>
+      <view class="goods-desc">{{item.description}}</view>
+      <view class="goods-cost">{{item.points_required}} 积分</view>
+    </view>
+  </view>
+
+  <!-- 积分明细 -->
+  <view class="section-title">积分明细</view>
+  <view wx:if="{{transactions.length === 0}}" class="empty-state">
+    <text>暂无积分记录</text>
+  </view>
+  <view wx:else>
+    <view class="card tx-card" wx:for="{{transactions}}" wx:key="id">
+      <view class="tx-row">
+        <view class="tx-desc">{{item.description_zh || item.action_code}}</view>
+        <view class="tx-amount {{item.change_type === 'earn' ? 'earn' : 'spend'}}">
+          {{item.change_type === 'earn' ? '+' : ''}}{{item.points_amount}}
+        </view>
+      </view>
+      <view class="tx-time">{{item.transaction_time}}</view>
+    </view>
+  </view>
+
+  <view class="disclaimer">你的积累，永远是你的。积分不可提现，仅用于兑换平台服务。</view>
+</view>

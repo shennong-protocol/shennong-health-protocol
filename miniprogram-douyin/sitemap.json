@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*",
+      "params": [],
+      "matching": "exact"
+    }
+  ],
+  "desc": "所有页面可被搜索"
+}

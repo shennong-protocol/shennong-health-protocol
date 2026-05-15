@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>华未堂·神农地球村 - 让每个人有价值地活着</title>
+    <meta name="description" content="华未堂神农地球村，全球健康保障共同体。消费即保障15年100%，神农舌象识体质，健康积分永不过期。君兰健康小程序，您的健康管理伙伴。">
+    <meta name="keywords" content="华未堂,神农地球村,健康保障,神农舌象,健康管理,君兰健康,健康积分,治未病,不过期">
+    <meta name="author" content="华未堂">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="华未堂·神农地球村 - 让每个人有价值地活着">
+    <meta property="og:description" content="全球健康保障共同体，消费即保障15年100%，神农舌象识体质，健康积分永不过期">
+    <meta property="og:site_name" content="华未堂">
+    
+    <!-- Mobile -->
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    
+    <style>
+        /* ==================== CSS Reset & Base ==================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            /* Color Palette - Green & Gold */
+            --primary-green: #2E7D32;
+            --primary-green-light: #4CAF50;
+            --primary-green-dark: #1B5E20;
+            --primary-gold: #D4AF37;
+            --primary-gold-light: #F5DEB3;
+            --primary-gold-dark: #B8860B;
+            
+            /* Neutral Colors */
+            --white: #FFFFFF;
+            --off-white: #FAFAF5;
+            --light-gray: #F5F5F0;
+            --text-dark: #1A1A1A;
+            --text-medium: #4A4A4A;
+            --text-light: #757575;
+            
+            /* Typography */
+            --font-size-xs: 16px;
+            --font-size-sm: 18px;
+            --font-size-base: 20px;
+            --font-size-lg: 24px;
+            --font-size-xl: 28px;
+            --font-size-2xl: 32px;
+            --font-size-3xl: 40px;
+            --font-size-4xl: 48px;
+            --font-size-5xl: 56px;
+            
+            /* Spacing */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+            --spacing-2xl: 64px;
+            --spacing-3xl: 80px;
+            
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 50%;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+            font-size: var(--font-size-base);
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--off-white);
+            overflow-x: hidden;
+        }
+        
+        /* ==================== Accessibility ==================== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+        
+        *:focus-visible {
+            outline: 3px solid var(--primary-gold);
+            outline-offset: 2px;
+        }
+        
+        /* ==================== Typography ==================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+        
+        h1 { font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl)); }
+        h2 { font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl)); }
+        h3 { font-size: clamp(var(--font-size-xl), 3vw, var(--font-size-2xl)); }
+        h4 { font-size: var(--font-size-lg); }
+        
+        p {
+            font-size: var(--font-size-base);
+            color: var(--text-medium);
+        }
+        
+        /* ==================== Navigation ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-sm) var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            text-decoration: none;
+            color: var(--primary-green);
+        }
+        
+        .navbar-logo-icon {
+            font-size: 32px;
+        }
+        
+        .navbar-logo-text {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+        
+        .navbar-link {
+            font-size: var(--font-size-sm);
+            color: var(--text-medium);
+            text-decoration: none;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+        }
+        
+        .navbar-link:hover,
+        .navbar-link:focus {
+            color: var(--primary-green);
+            background: rgba(46, 125, 50, 0.08);
+        }
+        
+        .btn-join {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: 14px 28px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition-normal);
+            min-height: 48px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-join:hover,
+        .btn-join:focus {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, var(--primary-green-dark), var(--primary-green));
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            margin: 5px 0;
+            transition: var(--transition-fast);
+        }
+        
+        /* ==================== Hero Section ==================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px var(--spacing-md) var(--spacing-3xl);
+            background: linear-gradient(135deg, 
+                rgba(46, 125, 50, 0.05) 0%, 
+                rgba(255, 255, 255, 0.9) 50%,
+                rgba(212, 175, 55, 0.05) 100%),
+                var(--off-white);
+            overflow: hidden;
+        }
+        
+        /* Chinese ink texture pattern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232E7D32' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        /* Floating herbs decoration */
+        .hero-decoration {
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero-decoration:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .hero-decoration:nth-child(2) { top: 25%; right: 15%; animation-delay: 1s; }
+        .hero-decoration:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 2s; }
+        .hero-decoration:nth-child(4) { bottom: 30%; right: 10%; animation-delay: 3s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: 8px 20px;
+            font-size: var(--font-size-sm);
+            color: var(--primary-green);
+            background: rgba(46, 125, 50, 0.1);
+            border: 1px solid rgba(46, 125, 50, 0.2);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .hero-title {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-md);
+            letter-spacing: 2px;
+        }
+        
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-xl));
+            color: var(--text-medium);
+            margin-bottom: var(--spacing-xl);
+            letter-spacing: 4px;
+        }
+        
+        /* Stats Section */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            min-width: 180px;
+        }
+        
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .stat-number {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--primary-green);
+            line-height: 1.2;
+        }
+        
+        .stat-number .counter {
+            display: inline-block;
+        }
+        
+        .stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+        }
+        
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: 18px 36px;
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+            border: none;
+            border-radius: var(--radius-xl);
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition-normal);
+            min-height: 56px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover,
+        .btn-primary:focus {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: 18px 36px;
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--primary-green);
+            background: var(--white);
+            border: 2px solid var(--primary-green);
+            border-radius: var(--radius-xl);
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition-normal);
+            min-height: 56px;
+        }
+        
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background: rgba(46, 125, 50, 0.05);
+        }
+        
+        /* ==================== Section Base Styles ==================== */
+        .section {
+            padding: var(--spacing-3xl) var(--spacing-md);
+        }
+        
+        .section-alt {
+            background: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: var(--font-size-sm);
+            color: var(--primary-green);
+            background: rgba(46, 125, 50, 0.1);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .section-title {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .section-desc {
+            font-size: var(--font-size-lg);
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* ==================== Core Services Section ==================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-gold));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            font-size: 56px;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .service-title {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-dark);
+        }
+        
+        .service-tagline {
+            font-size: var(--font-size-sm);
+            color: var(--primary-green);
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .service-desc {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.8;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            margin: var(--spacing-md) 0;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            background: var(--light-gray);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-green-light), var(--primary-gold));
+            border-radius: var(--radius-xl);
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+        
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--spacing-xs);
+            font-size: var(--font-size-xs);
+            color: var(--text-light);
+        }
+        
+        .progress-labels span {
+            text-align: center;
+        }
+        
+        .progress-labels span:nth-child(2) {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+        
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-xs) 0;
+            font-size: var(--font-size-sm);
+            color: var(--text-medium);
+        }
+        
+        .feature-item::before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+        
+        /* Warning Text */
+        .warning-text {
+            font-size: var(--font-size-xs);
+            color: var(--text-light);
+            padding: var(--spacing-sm);
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        /* ==================== Journey Section ==================== */
+        .journey-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-green), var(--primary-gold));
+            border-radius: 2px;
+        }
+        
+        .journey-step {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            position: relative;
+        }
+        
+        .journey-step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .journey-number {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+            color: var(--white);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            box-shadow: var(--shadow-md);
+            z-index: 1;
+        }
+        
+        .journey-content {
+            flex: 1;
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .journey-title {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-dark);
+        }
+        
+        .journey-desc {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+        }
+        
+        .journey-icon {
+            font-size: 32px;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        /* ==================== Wisdom Section ==================== */
+        .wisdom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .wisdom-card {
+            background: linear-gradient(135deg, var(--white), var(--off-white));
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(46, 125, 50, 0.1);
+            transition: var(--transition-normal);
+        }
+        
+        .wisdom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .wisdom-quote {
+            font-size: var(--font-size-xl);
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        .wisdom-quote::before {
+            content: '"';
+            font-size: 48px;
+            color: var(--primary-green);
+            opacity: 0.3;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .wisdom-explain {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        /* ==================== Testimonials Section ==================== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .testimonial-avatar {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-green-light), var(--primary-gold));
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--white);
+        }
+        
+        .testimonial-info h4 {
+            font-size: var(--font-size-base);
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            font-size: var(--font-size-xs);
+            color: var(--primary-green);
+            background: rgba(46, 125, 50, 0.1);
+            border-radius: var(--radius-xl);
+        }
+        
+        .testimonial-text {
+            font-size: var(--font-size-sm);
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+        
+        .testimonial-footer {
+            text-align: center;
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .testimonial-cta {
+            font-size: var(--font-size-lg);
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        /* ==================== Footer Section ==================== */
+        .footer {
+            background: linear-gradient(180deg, var(--off-white), #E8F5E9);
+            padding: var(--spacing-2xl) var(--spacing-md);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .footer-section h4 {
+            font-size: var(--font-size-base);
+            color: var(--primary-green);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .footer-links a {
+            font-size: var(--font-size-sm);
+            color: var(--text-medium);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .qr-codes {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .qr-item {
+            text-align: center;
+        }
+        
+        .qr-placeholder {
+            width: 120px;
+            height: 120px;
+            background: var(--white);
+            border: 2px dashed var(--primary-green);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-light);
+            font-size: var(--font-size-xs);
+        }
+        
+        .qr-label {
+            font-size: var(--font-size-xs);
+            color: var(--text-light);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(46, 125, 50, 0.2);
+            text-align: center;
+        }
+        
+        .footer-contact {
+            font-size: var(--font-size-sm);
+            color: var(--text-medium);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .footer-legal {
+            font-size: var(--font-size-xs);
+            color: var(--text-light);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .footer-disclaimer {
+            font-size: var(--font-size-xs);
+            color: var(--text-light);
+            padding: var(--spacing-sm);
+            background: rgba(46, 125, 50, 0.05);
+            border-radius: var(--radius-md);
+            margin-top: var(--spacing-md);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* ==================== Modal ==================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-normal);
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: var(--transition-normal);
+        }
+        
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+        
+        .modal-title {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .modal-qr {
+            width: 200px;
+            height: 200px;
+            background: var(--light-gray);
+            border-radius: var(--radius-lg);
+            margin: 0 auto var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+        }
+        
+        .modal-hint {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+        }
+        
+        /* ==================== Responsive ==================== */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                box-shadow: var(--shadow-md);
+            }
+            
+            .navbar-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+            
+            .stat-item {
+                width: 100%;
+            }
+            
+            .journey-timeline::before {
+                left: 40px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: var(--spacing-2xl) var(--spacing-sm);
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .navbar,
+            .btn-primary,
+            .btn-secondary {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo" aria-label="华未堂首页">
+                <span class="navbar-logo-icon">🌿</span>
+                <span class="navbar-logo-text">华未堂</span>
+            </a>
+            
+            <ul class="navbar-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#services" class="navbar-link" role="menuitem">保障</a></li>
+                <li role="none"><a href="#services" class="navbar-link" role="menuitem">积分</a></li>
+                <li role="none"><a href="#services" class="navbar-link" role="menuitem">神农舌象</a></li>
+                <li role="none"><a href="#wisdom" class="navbar-link" role="menuitem">关于</a></li>
+                <li role="none">
+                    <button class="btn-join" onclick="openModal()" aria-label="加入我们">
+                        <span>加入我们</span>
+                    </button>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <span class="hero-decoration" aria-hidden="true">🌿</span>
+        <span class="hero-decoration" aria-hidden="true">🍃</span>
+        <span class="hero-decoration" aria-hidden="true">🌱</span>
+        <span class="hero-decoration" aria-hidden="true">☘️</span>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🌍</span>
+                <span>神农地球村</span>
+            </div>
+            
+            <h1 class="hero-title">
+                让每个人< span class="highlight">有价值地活着</span>
+            </h1>
+            
+            <p class="hero-subtitle">全球健康保障共同体 · 你的健康，你做主</p>
+            
+            <div class="hero-stats" aria-label="平台数据">
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">👥</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="12847">0</span>
+                        <span>+</span>
+                    </div>
+                    <div class="stat-label">人已加入</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">🪙</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="256">0</span>
+                        <span>万</span>
+                    </div>
+                    <div class="stat-label">积分已发放</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">🛡️</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="36">0</span>
+                    </div>
+                    <div class="stat-label">项保障生效</div>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="openModal()" aria-label="立即加入平台">
+                    <span>立即加入</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+                <a href="#services" class="btn-secondary" role="button">
+                    <span>了解更多</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Services Section -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">核心服务</span>
+                <h2 class="section-title">三大体系 · 守护健康</h2>
+                <p class="section-desc">神农地球村三大核心体系，为您的健康保驾护航</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: 保障 -->
+                <article class="service-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="service-icon" aria-hidden="true">🛡️</div>
+                    <h3 class="service-title">神农保障</h3>
+                    <p class="service-tagline">消费即保障，15年100%保障</p>
+                    <p class="service-desc">消费累计保障额度，15年持续保障您的健康权益</p>
+                    
+                    <div class="progress-container" aria-label="保障进度">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="0"></div>
+                        </div>
+                        <div class="progress-labels">
+                            <span>5年<br><strong>10%</strong></span>
+                            <span>10年<br><strong>60%</strong></span>
+                            <span>15年<br><strong>100%</strong></span>
+                        </div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li class="feature-item">实物保障</li>
+                        <li class="feature-item">健康服务</li>
+                        <li class="feature-item">持续累积</li>
+                    </ul>
+                    
+                    <div class="warning-text">
+                        ⚠️ 保障为实物和服务，非现金
+                    </div>
+                </article>
+                
+                <!-- Service 2: 积分 -->
+                <article class="service-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="service-icon" aria-hidden="true">🪙</div>
+                    <h3 class="service-title">神农积分</h3>
+                    <p class="service-tagline">行为即积分，健康即财富</p>
+                    <p class="service-desc">每日行为转化为健康积分，积分兑换健康服务</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li class="feature-item">消费积分：每笔消费累积</li>
+                        <li class="feature-item">签到积分：每日签到奖励</li>
+                        <li class="feature-item">贡献积分：分享推荐奖励</li>
+                    </ul>
+                    
+                    <div class="warning-text">
+                        ⚠️ 积分不可提现，仅用于兑换平台服务
+                    </div>
+                </article>
+                
+                <!-- Service 3: 神农舌象 -->
+                <article class="service-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="service-icon" aria-hidden="true">🏥</div>
+                    <h3 class="service-title">神农舌象</h3>
+                    <p class="service-tagline">观舌象，识体质</p>
+                    <p class="service-desc">上传舌象照片，观察舌象辨识九种体质类型</p>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="60"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li class="feature-item">平和体质</li>
+                        <li class="feature-item">气虚/阳虚/阴虚</li>
+                        <li class="feature-item">痰湿/湿热/血瘀</li>
+                        <li class="feature-item">气郁/特禀体质</li>
+                    </ul>
+                    
+                    <div class="warning-text">
+                        ⚠️ 仅供参考，不构成医疗诊断建议
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Journey Section -->
+    <section class="section" id="journey">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">开始旅程</span>
+                <h2 class="section-title">你的健康之旅</h2>
+                <p class="section-desc">简单四步，开启您的健康管理之路</p>
+            </div>
+            
+            <div class="journey-timeline">
+                <div class="journey-step fade-in" style="transition-delay: 0.1s;">
+                    <div class="journey-number" aria-hidden="true">1</div>
+                    <div class="journey-content">
+                        <div class="journey-icon" aria-hidden="true">📱</div>
+                        <h3 class="journey-title">扫码进入小程序</h3>
+                        <p class="journey-desc">扫描下方二维码，进入"君兰健康"小程序，开启您的健康管理之旅</p>
+                    </div>
+                </div>
+                
+                <div class="journey-step fade-in" style="transition-delay: 0.2s;">
+                    <div class="journey-number" aria-hidden="true">2</div>
+                    <div class="journey-content">
+                        <div class="journey-icon" aria-hidden="true">👅</div>
+                        <h3 class="journey-title">神农舌象了解体质</h3>
+                        <p class="journey-desc">拍摄舌象，观察舌象辨识您的九种体质类型，了解身体特点</p>
+                    </div>
+                </div>
+                
+                <div class="journey-step fade-in" style="transition-delay: 0.3s;">
+                    <div class="journey-number" aria-hidden="true">3</div>
+                    <div class="journey-content">
+                        <div class="journey-icon" aria-hidden="true">✅</div>
+                        <h3 class="journey-title">每日打卡积累积分</h3>
+                        <p class="journey-desc">坚持每日签到打卡，完成健康任务，积累神农积分</p>
+                    </div>
+                </div>
+                
+                <div class="journey-step fade-in" style="transition-delay: 0.4s;">
+                    <div class="journey-number" aria-hidden="true">4</div>
+                    <div class="journey-content">
+                        <div class="journey-icon" aria-hidden="true">🛡️</div>
+                        <h3 class="journey-title">消费即保障15年全覆盖</h3>
+                        <p class="journey-desc">消费即积累保障额度，15年持续保障您的健康权益</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wisdom Section -->
+    <section class="section section-alt" id="wisdom">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">核心理念</span>
+                <h2 class="section-title">天人全息智慧</h2>
+                <p class="section-desc">华未堂的健康哲学，治未病，更治已病</p>
+            </div>
+            
+            <div class="wisdom-grid">
+                <div class="wisdom-card fade-in" style="transition-delay: 0.1s;">
+                    <p class="wisdom-quote">价值感是最好的药</p>
+                    <p class="wisdom-explain">当一个人感受到自己的价值，健康自然而来</p>
+                </div>
+                
+                <div class="wisdom-card fade-in" style="transition-delay: 0.2s;">
+                    <p class="wisdom-quote">健康是价值的外显<br>财富是健康的外显</p>
+                    <p class="wisdom-explain">三者相辅相成，共同构成美好人生</p>
+                </div>
+                
+                <div class="wisdom-card fade-in" style="transition-delay: 0.3s;">
+                    <p class="wisdom-quote">认真吃饭，好好睡觉<br>对人善良，对己克制</p>
+                    <p class="wisdom-explain">最简单的道理，最持久的健康</p>
+                </div>
+                
+                <div class="wisdom-card fade-in" style="transition-delay: 0.4s;">
+                    <p class="wisdom-quote">醒来不是病，焦虑才是病</p>
+                    <p class="wisdom-explain">—— 妈妈说，心态好才是真的好</p>
+                </div>
+                
+                <div class="wisdom-card fade-in" style="transition-delay: 0.5s;">
+                    <p class="wisdom-quote">有饭送给饥人<br>有话送给知人</p>
+                    <p class="wisdom-explain">—— 姥爷的家训，帮人不居高临下</p>
+                </div>
+                
+                <div class="wisdom-card fade-in" style="transition-delay: 0.6s;">
+                    <p class="wisdom-quote">治未病者，上医也</p>
+                    <p class="wisdom-explain">预防胜于治疗，健康管理从当下开始</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">用户心声</span>
+                <h2 class="section-title">他们都在改变</h2>
+                <p class="section-desc">听听已经在路上的伙伴们怎么说</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <article class="testimonial-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" aria-hidden="true">李</div>
+                        <div class="testimonial-info">
+                            <h4>李阿姨</h4>
+                            <span class="testimonial-badge">气虚体质</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "以前总觉得自己身体还行，做了神农舌象才知道是气虚体质。现在每天按建议调理，感觉精神好多了。"
+                    </p>
+                </article>
+                
+                <article class="testimonial-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" aria-hidden="true">王</div>
+                        <div class="testimonial-info">
+                            <h4>王叔叔</h4>
+                            <span class="testimonial-badge">痰湿体质</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "消费就能积累保障，这个理念很实在。现在家里日常消费都在平台上，感觉健康和实惠都有了。"
+                    </p>
+                </article>
+                
+                <article class="testimonial-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" aria-hidden="true">张</div>
+                        <div class="testimonial-info">
+                            <h4>张奶奶</h4>
+                            <span class="testimonial-badge">阴虚体质</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "我今年65了，这个小程序用起来很简单。每天签到就有积分，还可以兑换养生服务，儿女也放心。"
+                    </p>
+                </article>
+            </div>
+            
+            <div class="testimonial-footer fade-in">
+                <p class="testimonial-cta">加入他们，开始你的健康之旅</p>
+                <button class="btn-primary" onclick="openModal()" aria-label="立即加入">
+                    <span>立即加入</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于华未堂</h4>
+                <ul class="footer-links">
+                    <li><a href="#wisdom">品牌理念</a></li>
+                    <li><a href="#services">服务体系</a></li>
+                    <li><a href="#journey">使用指南</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>快速入口</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">神农保障</a></li>
+                    <li><a href="#services">神农积分</a></li>
+                    <li><a href="#services">神农舌象</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p class="footer-contact">📞 客服电话：400-888-8888（待补充真实号码）</p>
+                <p class="footer-contact">🕐 工作时间：9:00 - 18:00</p>
+                <p class="footer-contact">💬 微信群：见下方二维码</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>扫码体验</h4>
+                <div class="qr-codes">
+                    <div class="qr-item">
+                        <img src="images/小程序二维码.png" alt="君兰健康小程序码" style="width:140px;height:140px;border-radius:8px;">
+                        <span class="qr-label">君兰健康</span>
+                    </div>
+                    <div class="qr-item">
+                        <img src="images/群二维码.png" alt="神农地球村微信群二维码" style="width:140px;height:140px;border-radius:8px;">
+                        <span class="qr-label">加入社群</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="footer-legal">© 2024 华未堂·神农地球村 版权所有</p>
+            <p class="footer-legal">
+                <a href="#" style="color: inherit;">隐私政策</a> · 
+                <a href="#" style="color: inherit;">用户协议</a> · 
+                <a href="#" style="color: inherit;">ICP备案号</a>
+            </p>
+            
+            <div class="footer-disclaimer">
+                <strong>免责声明：</strong>本平台为健康管理工具，不构成医疗建议。神农舌象结果仅供参考，不构成医疗诊断建议，如有不适请咨询专业医疗机构。如有不适或疑问，请及时咨询专业医疗机构。
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal">
+            <h2 class="modal-title" id="modalTitle">扫码加入我们</h2>
+            <div class="modal-qr" aria-label="小程序二维码">
+                <img src="images/小程序二维码.png" alt="君兰健康小程序二维码" style="width:180px;height:180px;border-radius:8px;">
+            </div>
+            <p class="modal-hint">长按识别二维码，进入"君兰健康"小程序</p>
+            <button class="btn-secondary" onclick="closeModal()" style="margin-top: 16px; padding: 12px 24px; font-size: 16px;">
+                关闭
+            </button>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // ==================== Navigation ====================
+        const navbar = document.querySelector('.navbar');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        // Scroll effect for navbar
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // ==================== Modal ====================
+        const modalOverlay = document.getElementById('modalOverlay');
+        
+        function openModal() {
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Close modal on overlay click
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+        
+        // ==================== Counter Animation ====================
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(function() {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+        
+        // ==================== Progress Bar Animation ====================
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(function(bar) {
+                const width = bar.getAttribute('data-width');
+                if (width) {
+                    setTimeout(function() {
+                        bar.style.width = width + '%';
+                    }, 300);
+                }
+            });
+        }
+        
+        // ==================== Scroll Animations ====================
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger counter animation
+                    const counter = entry.target.querySelector('.counter');
+                    if (counter && !counter.classList.contains('animated')) {
+                        counter.classList.add('animated');
+                        animateCounter(counter);
+                    }
+                    
+                    // Trigger progress bar animation
+                    const progressBars = entry.target.querySelectorAll('.progress-fill');
+                    progressBars.forEach(function(bar) {
+                        const width = bar.getAttribute('data-width');
+                        if (width) {
+                            bar.style.width = width + '%';
+                        }
+                    });
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(function(el) {
+            observer.observe(el);
+        });
+        
+        // ==================== Smooth Scroll for Anchor Links ====================
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const navbarHeight = navbar.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // ==================== Keyboard Navigation ====================
+        document.addEventListener('keydown', function(e) {
+            // Tab navigation enhancement
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+        
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-nav');
+        });
+        
+        // ==================== Init ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add visible class to first section for initial animation
+            const firstHeroStats = document.querySelector('.hero-stats');
+            if (firstHeroStats) {
+                setTimeout(function() {
+                    firstHeroStats.querySelectorAll('.counter').forEach(function(counter) {
+                        animateCounter(counter);
+                    });
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>

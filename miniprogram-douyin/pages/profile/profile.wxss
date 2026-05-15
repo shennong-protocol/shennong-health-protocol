@@ -1,0 +1,119 @@
+/* 我的页样式 */
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 32rpx;
+}
+
+.avatar-large {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 24rpx;
+  border: 4rpx solid #E8F5E9;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-constitution {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 8rpx;
+}
+
+/* 信用分 */
+.credit-card {
+  padding: 32rpx;
+}
+
+.credit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.credit-label {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.credit-score {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #2E7D32;
+}
+
+.credit-bar {
+  height: 12rpx;
+  background: #E0E0E0;
+  border-radius: 6rpx;
+  overflow: hidden;
+  margin-bottom: 8rpx;
+}
+
+.credit-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #2E7D32);
+  border-radius: 6rpx;
+}
+
+.credit-level {
+  font-size: 26rpx;
+  color: #999;
+  text-align: right;
+}
+
+/* 功能列表 */
+.func-list {
+  padding: 0 32rpx;
+}
+
+.func-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 0;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.func-item:last-child {
+  border-bottom: none;
+}
+
+.func-arrow {
+  font-size: 36rpx;
+  color: #CCC;
+}
+
+/* 十六字家训 */
+.family-creed {
+  padding: 32rpx;
+  background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+  text-align: center;
+}
+
+.creed-title {
+  font-size: 28rpx;
+  color: #2E7D32;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.creed-text {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 1.8;
+}

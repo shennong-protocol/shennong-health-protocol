@@ -1,0 +1,75 @@
+<view class="container">
+  <!-- 用户信息栏 -->
+  <view class="card user-bar">
+    <view class="user-info">
+      <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="user-detail">
+        <view class="nickname">
+          <open-data type="userNickName"></open-data>
+        </view>
+        <view class="tag">地球村民</view>
+      </view>
+    </view>
+    <view class="daily-tip">认真吃饭，好好睡觉，对人善良，对己克制</view>
+  </view>
+
+  <!-- 今日签到 -->
+  <view class="card checkin-card" bindtap="handleCheckin">
+    <view class="checkin-left">
+      <view class="checkin-icon">☀️</view>
+      <view class="checkin-text">
+        <text class="checkin-title">今天也记得对自己好一点</text>
+        <text class="checkin-sub">{{checkedIn ? '今日已签到 ✓' : '点击签到，开启今日健康'}}</text>
+      </view>
+    </view>
+    <view class="checkin-right">
+      <text class="checkin-points">+2</text>
+    </view>
+  </view>
+
+  <!-- 三大核心入口 -->
+  <view class="section-title">核心服务</view>
+  
+  <view class="card service-card" bindtap="goTongue">
+    <view class="service-icon">🌿</view>
+    <view class="service-info">
+      <view class="service-name">神农舌象</view>
+      <view class="service-desc">帮你看见，不替你决定</view>
+    </view>
+    <view class="service-arrow">›</view>
+  </view>
+
+  <view class="card service-card" bindtap="goPoints">
+    <view class="service-icon">🪙</view>
+    <view class="service-info">
+      <view class="service-name">神农积分</view>
+      <view class="service-desc">永不过期，你的积累永远在</view>
+    </view>
+    <view class="service-right">
+      <text class="points-balance">{{pointsBalance}}</text>
+      <text class="points-unit">积分</text>
+    </view>
+  </view>
+
+  <view class="card service-card" bindtap="goGuarantee">
+    <view class="service-icon">🛡️</view>
+    <view class="service-info">
+      <view class="service-name">神农保障</view>
+      <view class="service-desc">走过15年，我们托你的底</view>
+    </view>
+    <view class="service-right">
+      <text class="guarantee-pct">{{guaranteeRatio}}%</text>
+    </view>
+  </view>
+
+  <!-- 健康每日一句 -->
+  <view class="card wisdom-card">
+    <view class="wisdom-icon">🌿</view>
+    <view class="wisdom-text">{{wisdomQuote}}</view>
+    <view class="wisdom-source">—— 天人全息生命体系</view>
+  </view>
+
+  <view class="disclaimer">⚠️ 我们帮你看见，决定权在你。如有不适，请就医。</view>
+</view>
